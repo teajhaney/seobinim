@@ -138,6 +138,6 @@ export const tools = [
   },
   {
     id: 11,
-    title: "Adobe Illustrator",
+    title: "Illustrator",
   },
 ];
