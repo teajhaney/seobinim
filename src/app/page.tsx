@@ -5,10 +5,11 @@ const page = () => {
   return (
     <main className="relative">
       <NavigationBar />
+
       <Hero />
       <Service />
-		  <Projects />
-		  <Tools />
+      <Projects />
+      <Tools />
     </main>
   );
 };
