@@ -1,45 +1,46 @@
 @import "tailwindcss";
 
 :root {
-	--background: #121212;
-	--foreground: #171717;
-	--text: #ffffff;
-	--primary: #1e1e1e;
-	--secondary: #f68338;
-	--accent: #d9c5a6;
-  }
-  
-  /* @media (prefers-color-scheme: dark) {
+  --background: #121212;
+  --foreground: #171717;
+  --text: #ffffff;
+  --primary: #1e1e1e;
+  --secondary: #f68338;
+  --accent: #d9c5a6;
+}
+
+/* @media (prefers-color-scheme: dark) {
 	:root {
 	  --background: #0a0a0a;
 	  --foreground: #ededed;
 	}
   } */
-  
-  @theme inline {
-	--color-background: var(--background);
-	--color-primary: var(--primary);
-	--color-foreground: var(--foreground);
-	--color-text: var(--text);
-	--color-secondary: var(--secondary);
-	--color-accent: var(--accent);
+
+@theme inline {
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-foreground: var(--foreground);
+  --color-text: var(--text);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: var(--text);
+  background: var(--background);
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .contentMargin {
+    @apply mx-3 2xl:mx-auto 2xl:w-[1300px];
   }
-  body {
-	color: var(--text);
-	background: var(--background);
-	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  .flex-center {
+    @apply flex justify-center items-center;
   }
-  
-  @layer utilities {
-	.contentMargin {
-	  @apply mx-3 2xl:mx-auto 2xl:w-[1300px];
-	}
-	.flex-center {
-	  @apply flex justify-center items-center;
-	}
-	.flexcol-center {
-	  @apply flex flex-col justify-center items-center;
-	}
+  .flexcol-center {
+    @apply flex flex-col justify-center items-center;
   }
-  
-  
+}
