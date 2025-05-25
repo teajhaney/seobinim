@@ -5,7 +5,7 @@ import React from "react";
 
 const Tools = () => {
   return (
-    <section className=" section " id="projects">
+    <section className=" section " id="tools">
       <div className="contentMargin space-y-10">
         {/* Section header */}
         <motion.div
