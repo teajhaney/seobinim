@@ -1,11 +1,12 @@
+import { link } from "fs";
 import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaFacebookF } from "react-icons/fa6";
 
 export const navigationItems = [
-  { items: "Home" },
-  { items: "Service" },
-  { items: "Projects" },
-  { items: "Contact" },
+  { item: "Home", link: "home" },
+  { item: "Service", link: "service" },
+  { item: "Projects", link: "projects" },
+  { item: "Contact", link: "contact" },
 ];
 
 export const links = [
@@ -24,5 +25,9 @@ export const links = [
   {
     icon: FaInstagram,
     link: "https://www.instagram.com/teajhaney",
+  },
+  {
+    icon: FaFacebookF,
+    link: "https://www.facebook.com/teajhaney",
   },
 ];

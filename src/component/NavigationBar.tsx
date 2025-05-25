@@ -3,42 +3,41 @@ import React from "react";
 import { Button } from "@/component";
 import { IoIosArrowRoundUp } from "react-icons/io";
 import { navigationItems } from "@/constant";
-import Link from "next/link";
 
 const NavigationBar = () => {
   return (
     <nav className="fixed top-0 left-0 h-20 custom-shadow  thin-border-b bg-background w-full z-100">
       <div className="h-full contentMargin flex items-center justify-between">
-        <h1
+        <a
+          href={`#${navigationItems[0].item}`}
           onClick={(e) => {
             e.preventDefault();
             const target = document.querySelector(
-              `#${navigationItems[0].items.toLocaleLowerCase()}`
+              `#${navigationItems[0].item}`
             );
             if (target) {
               target.scrollIntoView({ behavior: "smooth" });
             }
-          }}
-          className="font-black text-xl text-secondary">
-          Seobinim
-        </h1>
+          }}>
+          <h1 className="font-black text-xl text-secondary cursor-pointer">
+            Seobinim
+          </h1>
+        </a>
         <ul className="h-full flex items-center gap-5 max-md:hidden">
-          {navigationItems.map((item, index) => (
+          {navigationItems.map(({ item, link }, index) => (
             <li key={index}>
-              <Link
-                href={`${item.items.toLocaleLowerCase()}`}
+              <a
+                href={`#${link}`}
                 onClick={(e) => {
                   e.preventDefault();
-                  const target = document.querySelector(
-                    `#${item.items.toLocaleLowerCase()}`
-                  );
+                  const target = document.querySelector(`#${link}`);
                   if (target) {
                     target.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
                 className="text-secondary font-medium text-lg cursor-pointer hover:underline hover:decoration-secondary">
-                {item.items}
-              </Link>
+                {item}
+              </a>
             </li>
           ))}
         </ul>

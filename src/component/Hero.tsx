@@ -1,6 +1,8 @@
+"use client";
+
 import { links } from "@/constant";
-import { link } from "fs";
 import Link from "next/link";
+import { Button } from "@/component";
 
 const Hero = () => {
   return (
@@ -27,12 +29,18 @@ const Hero = () => {
           <div className="flex gap-2 text-secondary">
             {links.map(({ icon: Icon, link }, index) => (
               <Link key={index} href={link} target="_blank">
-                <div className="h-8 w-8 thin-border rounded-lg flex items-center justify-center">
+                <div className="h-8 w-8 thin-border rounded-lg flex items-center justify-center hover:shadow-[0px_0px_10px_#f68338] cursor-pointer transition-all duration-300 ">
                   <Icon />
                 </div>
               </Link>
             ))}
           </div>
+          <Button
+            onclick={() => {}}
+            className=" px-5 py-2 rounded-full hover:shadow-[0px_0px_10px_#f68338] cursor-pointer  transition-all duration-300">
+            {" "}
+            <p>Dowbload CV</p>
+          </Button>
         </div>
       </div>
     </section>
