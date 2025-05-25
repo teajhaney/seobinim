@@ -1,4 +1,4 @@
-import { NavigationBar, Hero, Service, Projects } from "@/component";
+import { NavigationBar, Hero, Service, Projects, Tools } from "@/component";
 import React from "react";
 
 const page = () => {
@@ -7,7 +7,8 @@ const page = () => {
       <NavigationBar />
       <Hero />
       <Service />
-      <Projects />
+		  <Projects />
+		  <Tools />
     </main>
   );
 };

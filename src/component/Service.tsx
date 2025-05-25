@@ -16,7 +16,10 @@ const Service = () => {
           <h1 className="font-bold text-2xl">
             {" "}
             Services{" "}
-            <span role="img" aria-label="fire">
+            <span
+              role="img"
+              aria-label="fire"
+              className="inline-block ml-4 transform hover:scale-110 transition-transform">
               🔥
             </span>
           </h1>
@@ -51,13 +54,9 @@ const Service = () => {
                   <div className="h-px w-16 gradient-bg opacity-50" />
                 </div>
 
-                <h3 className=" text-xl  mb-2 tracking-wide">
-                  {title}
-                </h3>
+                <h3 className=" text-xl  mb-2 tracking-wide">{title}</h3>
 
-                <p className=" text-sm leading-relaxed">
-                  {description}
-                </p>
+                <p className=" text-sm leading-relaxed">{description}</p>
               </div>
 
               <div className="h-[2px] w-full gradient-bg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />

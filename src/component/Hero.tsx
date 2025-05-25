@@ -28,7 +28,7 @@ const Hero = () => {
           </div>
           <div className="flex gap-2 text-secondary">
             {links.map(({ icon: Icon, link }, index) => (
-              <Link key={index} href={link} target="_blank">
+              <Link key={index} href={link} target="_blank" rel="noreferrer">
                 <div className="h-8 w-8 thin-border rounded-lg flex items-center justify-center hover:shadow-[0px_0px_10px_#f68338] cursor-pointer transition-all duration-300 ">
                   <Icon />
                 </div>

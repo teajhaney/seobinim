@@ -8,6 +8,7 @@ export const navigationItems = [
   { item: "Home", link: "home" },
   { item: "Services", link: "services" },
   { item: "Projects", link: "projects" },
+  { item: "Tools", link: "tools" },
   { item: "Contact", link: "contact" },
 ];
 
@@ -65,43 +66,78 @@ export const services = [
   },
 ];
 
-
 export const projects = [
   {
-    name: "Anon Truth",
-    description: "AnonTruth is an anonymous group chat app where messages are sent without revealing the sender’s identity. Over 500 users are already sharing unfiltered thoughts freely. 🚀",
-    language: "ReactJS + TailwindCSS + NODE + MONGODB + EXPRESSJS",
-    link: "https://anon-truth-owpm.vercel.app/",
+    name: "SIMVOICE",
+    description:
+      "SIMVOICE is a simple and efficient invoice web app that allows users to create, save, and download invoices as PDF files for streamlined billing.",
+    language: "NextJs + TailwindCSS + Firebase",
+    link: "https://simvoice.vercel.app/",
   },
   {
-    name: "CARE CONNECT",
-    description: "CareConnect is a web-based creche management system that connects parents, staff, and admins. It offers real-time updates on children’s activities, attendance, and events, while enabling secure fee payments and streamlined operations.",
-    language: "ReactJS + TailwindCSS + Firebase + ReCharts",
-    link: "https://care-connect-wine.vercel.app/",
+    name: "SIMPLY FRESH ",
+    description:
+      "A fully responsive e-commerce website for a local supermarket. Users can explore products, browse categories, and shop with a clean and intuitive UI.",
+    language: "ReactJS + TailwindCSS + Vite",
+    link: "https://simple-fresh-supermarket.vercel.app/",
   },
   {
-    name: "NZ Dine",
-    description: "Welcome to NZdine, a modern, responsive restaurant website. Explore the menu, make reservations, and contact the restaurant easily with a sleek, user-friendly interface.",
-    language: "ReactJS + TailwindCSS + Firebase",
-    link: "https://nz-dine.vercel.app/",
-  },
-  {
-    name: "BILLIE-TALK",
-    description: "BILLIE-TALK is a non-anonymous chat app where users can message anyone with an account. New users are automatically added to the chat list of all existing users, making it easy to connect instantly.",
-    language: "ReactJS + TailwindCSS + Firebase",
-    link: "https://chat-app-mu-ebon.vercel.app/",
-  },
-  {
-    name: "NZ BOT",
-    description: "NZ Bot is an AI-powered tool built for teens to easily ask questions and get helpful answers. Powered by the Gemini API, it’s designed with a simple, accessible interface—no complicated pages, just direct and easy conversations.",
-    language: "ReactJS + TailwindCSS + GEMINI API",
-    link: "https://nami-bot-beta.vercel.app/",
-  },
-  {
-    name: "REDEFINE GAMING",
-    description: "REDEFINE GAMING is a gaming website showcasing details about a company's newly launched game. The project’s primary goal was to practice and implement smooth GSAP animations for an engaging user experience.",
-    language: "ReactJS + TailwindCSS + GSAP ANIMATION",
-    link: "https://gamify-gules.vercel.app/",
+    name: "BOOK SMART",
+    description:
+      "Book Smart is an online platform for browsing and buying books efficiently. It provides a seamless shopping experience with secure payment integration.",
+    language: "ReactJS + TailwindCSS + Paystack Sdk",
+    link: "https://book-smart-app-theta.vercel.app/",
   },
 ];
-  
+
+export const tools = [
+  {
+    id: 0,
+    title: "Html",
+  },
+  {
+    id: 1,
+    title: "Css",
+  },
+  {
+    id: 2,
+    title: "Bootstrap",
+  },
+  {
+    id: 3,
+    title: "TailwindCSS",
+  },
+
+  {
+    id: 4,
+    title: "JavaScript",
+  },
+  {
+    id: 5,
+    title: "TypeScript",
+  },
+  {
+    id: 6,
+    title: "ReactJs",
+  },
+  {
+    id: 7,
+    title: "NextJs",
+  },
+  {
+    id: 8,
+    title: "Git",
+  },
+  {
+    id: 9,
+    title: "Github",
+  },
+  {
+    id: 10,
+    title: "Figma",
+  },
+  {
+    id: 11,
+    title: "Adobe Illustrator",
+  },
+];

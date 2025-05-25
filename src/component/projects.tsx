@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { projects } from "@/constant";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -14,15 +14,15 @@ const Projects = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-left mb-5">
-          <h2 className="text-2xl md:text-3xl font-clashbold text-white mb-6 tracking-tight">
+          className="space-y-5">
+          <h2 className="font-bold text-2xl">
             Projects
             <span className="inline-block ml-4 transform hover:scale-110 transition-transform">
               🚀
             </span>
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-[#ef4444] to-[#f87171] mb-6" />
-          <p className=" text-base md:text-l ">
+          <div className="h-1 w-24 gradient-bg mb-6" />
+          <p className="text-sm text-gray">
             Showcasing my latest works and experiments in tech
           </p>
         </motion.div>
@@ -36,23 +36,24 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="group relative bg-[#200406]/80 rounded-lg overflow-hidden border border-[#ef444410] backdrop-blur-md">
+              whileHover={{
+                scale: 1.015,
+                translateY: -2,
+                boxShadow: "0 0px 20px #f68338",
+              }}
+              className="group relative bg-background/80 rounded-lg overflow-hidden thin-border backdrop-blur-md">
               {/* Hover glow layer */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#ef4444]/10 to-[#f87171]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent/50 to-secondary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Card content */}
               <div className="relative p-8 flex flex-col h-full">
-                <h3 className="text-white text-2xl font-clashbold mb-3">
-                  {name}
-                </h3>
+                <h3 className=" text-2xl  mb-3">{name}</h3>
 
-                <p className="text-[#ef4444] text-sm font-medium mb-4">
+                <p className="text-accent text-sm font-medium mb-4">
                   {language}
                 </p>
 
-                <p className=" text-sm flex-grow">
-                  {description}
-                </p>
+                <p className=" text-sm flex-grow">{description}</p>
 
                 <Link
                   href={link}
@@ -61,14 +62,14 @@ const Projects = () => {
                   className="mt-6 inline-flex items-center group/link">
                   <motion.div
                     whileHover={{ x: 5 }}
-                    className="flex items-center space-x-3 text-white hover:text-[#f87171] transition-colors">
+                    className="flex items-center space-x-3  hover:text-secondary transition-colors">
                     <span className="text-sm font-medium">View Project</span>
                     <MdArrowOutward className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" />
                   </motion.div>
                 </Link>
 
                 {/* Bottom hover line */}
-                <div className="h-[2px] w-full bg-gradient-to-r from-[#ef4444]/50 to-[#f87171]/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 absolute bottom-0 left-0" />
+                <div className="h-[2px] w-full bg-gradient-to-r from-accent/50 to-secondary/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 absolute bottom-0 left-0" />
               </div>
             </motion.div>
           ))}
