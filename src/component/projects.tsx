@@ -1,3 +1,4 @@
+"use client"
 import { projects } from "@/constant";
 import { motion } from "framer-motion";
 import Link from "next/link";
