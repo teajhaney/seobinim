@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const NavigationBar = () => {
   return (
-    <nav className="fixed top-0 left-0 h-20 shadow border-b border-secondary bg-background w-full">
+    <nav className="fixed top-0 left-0 h-20 custom-shadow  thin-border-b bg-background w-full z-100">
       <div className="h-full contentMargin flex items-center justify-between">
         <h1
           onClick={(e) => {

@@ -1,4 +1,4 @@
-import { NavigationBar, Hero } from "@/component";
+import { NavigationBar, Hero, Service } from "@/component";
 import React from "react";
 
 const page = () => {
@@ -6,6 +6,7 @@ const page = () => {
     <main className="relative">
 		  <NavigationBar />
 		  <Hero />
+		  <Service  />
     </main>
   );
 };
