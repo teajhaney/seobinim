@@ -1,8 +1,9 @@
-import React, { Children } from "react";
-
 const Button = ({ onclick, className, children, disabled }: buttonProp) => {
   return (
-    <button onClick={onclick} disabled={disabled} className={`${className} bg-secondary`}>
+    <button
+      onClick={onclick}
+      disabled={disabled}
+      className={`${className} bg-secondary`}>
       {children}
     </button>
   );

@@ -41,13 +41,25 @@ const NavigationBar = () => {
             </li>
           ))}
         </ul>
-        <Button
-          onclick={() => {}}
-          className="px-5 py-3 rounded-sm flex-center font-medium text-sm gap-2">
-          {" "}
-          <p>HIRE ME</p>
-          <IoIosArrowRoundUp className="rotate-z-45" />
-        </Button>
+        <a
+          href={`#${navigationItems[3].item}`}
+          onClick={(e) => {
+            e.preventDefault();
+            const target = document.querySelector(
+              `#${navigationItems[3].item}`
+            );
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          }}>
+          <Button
+            onclick={() => {}}
+            className="px-5 py-3 rounded-sm flex-center font-medium text-sm gap-2 hover:shadow-[0px_0px_10px_#f68338] cursor-pointer  transition-all duration-300">
+            {" "}
+            <p>HIRE ME</p>
+            <IoIosArrowRoundUp className="rotate-z-45" />
+          </Button>
+        </a>
       </div>
     </nav>
   );
