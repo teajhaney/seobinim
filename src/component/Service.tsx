@@ -5,7 +5,7 @@ import React from "react";
 
 const Service = () => {
   return (
-    <section className="relative section " id="services">
+    <section className=" section " id="services">
       <div className="contentMargin space-y-10">
         {" "}
         <motion.div
