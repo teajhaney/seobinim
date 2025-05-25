@@ -4,7 +4,7 @@ const NavigationBar = () => {
   return (
     <nav className="h-16 shadow border-b border-accent">
 		  <div className="h-full contentMargin flex items-center justify-between">
-			  <h1>Seobinim....</h1>
+			  <h1>Seobinim</h1>
 	  </div>
     </nav>
   );
