@@ -7,9 +7,21 @@ import Link from "next/link";
 
 const NavigationBar = () => {
   return (
-    <nav className="sticky h-20 shadow border-b border-secondary">
+    <nav className="fixed top-0 left-0 h-20 shadow border-b border-secondary bg-background w-full">
       <div className="h-full contentMargin flex items-center justify-between">
-        <h1 className="font-black text-xl text-secondary">Seobinim</h1>
+        <h1
+          onClick={(e) => {
+            e.preventDefault();
+            const target = document.querySelector(
+              `#${navigationItems[0].items.toLocaleLowerCase()}`
+            );
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+          className="font-black text-xl text-secondary">
+          Seobinim
+        </h1>
         <ul className="h-full flex items-center gap-5 max-md:hidden">
           {navigationItems.map((item, index) => (
             <li key={index}>

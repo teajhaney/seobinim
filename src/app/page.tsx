@@ -1,10 +1,11 @@
-import { NavigationBar } from "@/component";
+import { NavigationBar, Hero } from "@/component";
 import React from "react";
 
 const page = () => {
   return (
     <main className="relative">
-      <NavigationBar />
+		  <NavigationBar />
+		  <Hero />
     </main>
   );
 };
