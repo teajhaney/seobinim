@@ -4,9 +4,9 @@ import React from "react";
 const page = () => {
   return (
     <main className="relative">
-		  <NavigationBar />
-		  <Hero />
-		  <Service  />
+      <NavigationBar />
+      <Hero />
+      <Service />
     </main>
   );
 };

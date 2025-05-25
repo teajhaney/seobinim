@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="   h-[600px]  lg:h-screen bg-[url('/images/dev.jpg')] bg-cover bg-center thin-border-b">
+      className="   h-[600px]  lg:h-[800px] bg-[url('/images/dev.jpg')] bg-cover bg-center thin-border-b">
       <div className="pt-32 pb-10  bg-black/60 h-full">
         <div className="contentMargin flexcol-center h-full space-y-5 text-text text-center">
           <h1 className="font-bold text-4xl lg:text-6xl">

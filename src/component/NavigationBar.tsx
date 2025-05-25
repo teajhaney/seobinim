@@ -6,8 +6,8 @@ import { navigationItems } from "@/constant";
 
 const NavigationBar = () => {
   return (
-    <nav className="fixed top-0 left-0 h-20 custom-shadow  thin-border-b bg-background w-full z-100">
-      <div className="h-full contentMargin flex items-center justify-between">
+    <nav className="fixed  top-0 left-0 h-20 custom-shadow  thin-border-b bg-background/90 w-full z-100">
+      <header className="h-full contentMargin flex items-center justify-between">
         <a
           href={`#${navigationItems[0].item}`}
           onClick={(e) => {
@@ -60,7 +60,7 @@ const NavigationBar = () => {
             <IoIosArrowRoundUp className="rotate-z-45" />
           </Button>
         </a>
-      </div>
+      </header>
     </nav>
   );
 };
