@@ -1,32 +1,34 @@
-"use client";
-import { services } from "@/constant";
-import { motion } from "framer-motion";
-import React from "react";
+'use client';
+import { services } from '@/constant';
+import { motion } from 'motion/react';
+import React from 'react';
 
 const Service = () => {
   return (
     <section className=" section " id="services">
       <div className="contentMargin space-y-10">
-        {" "}
+        {' '}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="space-y-5">
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          className="space-y-5"
+        >
           <h1 className="font-bold text-2xl">
-            {" "}
-            Services{" "}
+            {' '}
+            Services{' '}
             <span
               role="img"
               aria-label="fire"
-              className="inline-block ml-4 transform hover:scale-110 transition-transform">
+              className="inline-block ml-4 transform hover:scale-110 transition-transform"
+            >
               🔥
             </span>
           </h1>
           <div className="h-1 w-24 gradient-bg mb-6" />
           <p className="text-sm text-gray">
-            Specialized in Software Development with a focus on building
-            engaging and responsive user interfaces.
+            Specialized in Software Development with a focus on building engaging and responsive
+            user interfaces.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -40,9 +42,10 @@ const Service = () => {
               whileHover={{
                 scale: 1.015,
                 translateY: -2,
-                boxShadow: "0 0px 20px #f68338",
+                boxShadow: '0 0px 20px #f68338',
               }}
-              className="group relative  rounded-lg overflow-hidden border thin-border transform-gpu will-change-transform">
+              className="group relative  rounded-lg overflow-hidden border thin-border transform-gpu will-change-transform"
+            >
               {/* Soft hover gradient background */}
               <div className="absolute inset-0 bg-gradient-to-r from-accent/50 to-secondary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               {/* Card Content */}

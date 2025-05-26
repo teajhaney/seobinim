@@ -1,6 +1,6 @@
 "use client";
 import { tools } from "@/constant";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import React from "react";
 
 const Tools = () => {

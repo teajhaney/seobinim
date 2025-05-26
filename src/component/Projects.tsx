@@ -1,6 +1,6 @@
 "use client";
 import { projects } from "@/constant";
-import { motion } from "framer-motion";
+import { motion } from 'motion/react';
 import Link from "next/link";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
