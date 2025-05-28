@@ -1,11 +1,12 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { IoIosPhonePortrait } from 'react-icons/io';
 import { CiMail } from 'react-icons/ci';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'motion/react';
+import { Button, LooadingSpinner } from '@/component';
 
 const contactSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -17,13 +18,45 @@ const contactSchema = z.object({
 type ContactFormData = z.infer<typeof contactSchema>;
 
 const Contacts = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
+
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      setIsLoading(true);
+      const res = await fetch('https://formspree.io/f/mgvkglnz', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        }),
+      });
+
+      if (res.ok) {
+        setIsLoading(false);
+        const toast = (await import('react-hot-toast')).default;
+        toast.success('Message sent');
+        reset();
+      }
+    } catch (error) {
+      setIsLoading(false);
+      console.log(error);
+      const toast = (await import('react-hot-toast')).default;
+      toast.error('Failed to send message');
+    }
+  };
 
   const labelStyles = 'block max-lg:text-sm text-lg font-bold ';
   const inputStyles =
@@ -39,12 +72,14 @@ const Contacts = () => {
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="space-y-10"
         >
-          <h1 className="text-center text-2xl font-bold">Get In Touch</h1>
-          <p className="text-center text-sm text-gray">
-            I help design, enhance, and build intuitive product experiences — whether you’re
-            starting fresh or improving an existing product. Let’s connect and bring your ideas to
-            life.
-          </p>
+          <h1 className="text-center text-3xl font-bold">Get In Touch</h1>
+          <div className="w-full flex justify-center">
+            <p className="text-center text-lg text-gray md:max-w-[600px]">
+              I help design, enhance, and build intuitive product experiences — whether you’re
+              starting fresh or improving an existing product. Let’s connect and bring your ideas to
+              life.
+            </p>
+          </div>
         </motion.div>
         <div className="flex flex-col lg:flex-row gap-10  w-full">
           {/* Left Column */}
@@ -80,7 +115,7 @@ const Contacts = () => {
             className="basis-8/12 "
           >
             {/* form */}
-            <form onSubmit={handleSubmit(() => {})} className=" space-y-5">
+            <form onSubmit={handleSubmit(onSubmit)} className=" space-y-5">
               <div className="flex flex-col md:flex-row gap-5  w-full">
                 {/* name */}
                 <div className="w-full">
@@ -141,12 +176,17 @@ const Contacts = () => {
                 {errors.message && <p className={errorStyle}>{errors.message.message}</p>}
               </div>
 
-              <button
+              <Button
+                onclick={() => {}}
                 type="submit"
-                className="w-fit bg-secondary text-white py-3 px-5 rounded-lg hover:bg-accent transition-colors duration-300 font-semibold"
+                className="w-52 bg-secondary text-white py-3 px-5 rounded-lg hover:bg-accent transition-colors duration-300 font-semibold flex justify-center"
               >
-                Send Message
-              </button>
+                {isLoading ? (
+                  <LooadingSpinner className="border-white group-hover:border-primary w-6 h-6" />
+                ) : (
+                  <p className="text-xs md:text-sm font-inter">Sending message</p>
+                )}
+              </Button>
             </form>
           </motion.div>
         </div>

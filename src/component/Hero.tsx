@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { AnimatedWordRotator, Button } from '@/component';
+import { AnimatedWordRotator } from '@/component';
 import { links } from '@/constant';
 
 const Hero = () => {
@@ -37,13 +37,13 @@ const Hero = () => {
               </Link>
             ))}
           </div>
-          <Button
-            onclick={() => {}}
-            className=" px-5 py-2 rounded-full hover:shadow-[0px_0px_10px_#f68338] cursor-pointer  transition-all duration-300"
+          <a
+            href="/cv/my-cv.pdf"
+            download
+            className="px-5 py-2 rounded-full hover:shadow-[0px_0px_10px_#f68338] cursor-pointer transition-all duration-300 bg-secondary text-white"
           >
-            {' '}
-            <p>Dowbload CV</p>
-          </Button>
+            <p className="text-xs md:text-sm font-inter">Download CV</p>
+          </a>
         </div>
       </div>
     </section>
