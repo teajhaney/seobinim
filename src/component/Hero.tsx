@@ -1,10 +1,8 @@
 'use client';
 
-import { links, words } from '@/constant';
 import Link from 'next/link';
-import { Button } from '@/component';
-import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatedWordRotator, Button } from '@/component';
+import { links } from '@/constant';
 
 const Hero = () => {
   return (
@@ -14,8 +12,8 @@ const Hero = () => {
     >
       <div className="pt-32 pb-10  bg-black/60 h-full">
         <div className="contentMargin flexcol-center h-full space-y-5 text-text text-center">
-          <h1 className="  overflow-hidden  font-bold text-4xl lg:text-6xl inline">
-            <span className=" text-end">
+          <h1 className="    font-bold text-4xl lg:text-6xl inline">
+            <span className=" overflow-hidden text-end">
               <AnimatedWordRotator />
             </span>{' '}
             Software Developer
@@ -53,28 +51,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-function AnimatedWordRotator() {
-  const [index, setIndex] = useState(0);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(prev => (prev + 1) % words.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
-  return (
-    <AnimatePresence mode="wait">
-      <motion.span
-        key={words[index]}
-        initial={{ y: '100%', opacity: 0 }}
-        animate={{ y: '0%', opacity: 1 }}
-        exit={{ y: '-100%', opacity: 0 }}
-        transition={{ duration: 1, }}
-        className=" inline-block min-w-96 w-fit text-secondary font-mono"
-        style={{ top: 0, left: 0 }}
-      >
-        {words[index]}
-      </motion.span>
-    </AnimatePresence>
-  );
-}

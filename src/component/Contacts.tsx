@@ -29,21 +29,31 @@ const Contacts = () => {
   const inputStyles =
     'text-secondary mt-2 w-full max-sm:py-2 py-3 px-5 border border-secondary rounded-lg focus:outline-none ';
   const errorStyle = 'text-red-500 text-sm mt-1';
-  // 	const inputVariant; {
-  // 		initial: { scale: 1 },
-  // 		final:
-  // }
+
   return (
     <section id="contacts" className="section">
       <div className="contentMargin space-y-10 ">
-        <h1 className="text-center text-2xl font-bold">Get In Touch</h1>
-        <p className="text-center text-sm text-gray">
-          I help design, enhance, and build intuitive product experiences — whether you’re starting
-          fresh or improving an existing product. Let’s connect and bring your ideas to life.
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          className="space-y-10"
+        >
+          <h1 className="text-center text-2xl font-bold">Get In Touch</h1>
+          <p className="text-center text-sm text-gray">
+            I help design, enhance, and build intuitive product experiences — whether you’re
+            starting fresh or improving an existing product. Let’s connect and bring your ideas to
+            life.
+          </p>
+        </motion.div>
         <div className="flex flex-col lg:flex-row gap-10  w-full">
           {/* Left Column */}
-          <div className="basis-4/12  space-y-10">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
+            className="basis-4/12  space-y-10"
+          >
             <div className="flex flex-col items-center">
               <IoIosPhonePortrait className="text-2xl  " />
               <h3 className="text-lg font-semibold ">Call Me</h3>
@@ -61,9 +71,15 @@ const Contacts = () => {
                 <p className="text-sm ">teajhaney@gmail.com</p>
               </div>
             </div>
-          </div>
+          </motion.div>
           {/* right column */}
-          <div className="basis-8/12 ">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
+            className="basis-8/12 "
+          >
+            {/* form */}
             <form onSubmit={handleSubmit(() => {})} className=" space-y-5">
               <div className="flex flex-col md:flex-row gap-5  w-full">
                 {/* name */}
@@ -132,7 +148,7 @@ const Contacts = () => {
                 Send Message
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
