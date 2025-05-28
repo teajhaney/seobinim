@@ -9,8 +9,9 @@ export const navigationItems = [
   { item: "Services", link: "services" },
   { item: "Projects", link: "projects" },
   { item: "Tools", link: "tools" },
-  { item: "Contact", link: "contact" },
+  { item: "Contacts", link: "contacts" },
 ];
+export const words = ['Creative', 'Passionate', 'Innovative', 'Adaptable', 'Focused'];
 
 export const links = [
   {
@@ -126,18 +127,26 @@ export const tools = [
   },
   {
     id: 8,
-    title: "Git",
+    title: "GSAP",
   },
   {
     id: 9,
-    title: "Github",
+    title: "Motion",
   },
   {
     id: 10,
-    title: "Figma",
+    title: "Git",
   },
   {
     id: 11,
+    title: "Github",
+  },
+  {
+    id: 12,
+    title: "Figma",
+  },
+  {
+    id: 13,
     title: "Illustrator",
   },
 ];

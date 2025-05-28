@@ -73,10 +73,3 @@ const Service = () => {
 
 export default Service;
 
-{
-  /* <div className="flex">
-<div className="h-8 w-8 thin-border rounded-lg flex items-center justify-center hover:shadow- ">
-	  <Icon />
-	</div>
-</div> */
-}

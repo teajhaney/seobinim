@@ -1,13 +1,6 @@
-import {
-  NavigationBar,
-  Hero,
-  Service,
-  Projects,
-  Tools,
-  Footer,
-} from "@/component";
+import { NavigationBar, Hero, Service, Projects, Tools, Footer, Contacts } from '@/component';
 
-import React from "react";
+import React from 'react';
 
 const page = () => {
   return (
@@ -18,6 +11,7 @@ const page = () => {
       <Service />
       <Projects />
       <Tools />
+      <Contacts />
       <Footer />
     </main>
   );
