@@ -36,6 +36,15 @@ const Footer = () => {
               Seobinim <span className=" text-[14px] lg:text-base">{new Date().getFullYear()}</span>
             </p>
           </div>
+          <a
+            className="text-xs text-tertiary hover:underline hover:decoration-secondary  cursor-pointer"
+            href="https://github.com/teajhaney"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {' '}
+            Github @teajhaney
+          </a>
           <p className="transition-all duration-300 text-end text-sm lg:text-base mt-1">
             {displayTime}
           </p>
