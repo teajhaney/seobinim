@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { AiOutlineCopyright } from 'react-icons/ai';
+
 const Footer = () => {
   const [time, setTime] = useState<string>('');
   const [mounted, setMounted] = useState(false);
@@ -24,6 +25,7 @@ const Footer = () => {
   }, []);
 
   const displayTime = mounted ? time : '';
+
   return (
     <footer className="py-10">
       <div className="contentMargin">
