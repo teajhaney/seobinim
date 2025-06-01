@@ -5,12 +5,14 @@ import { useEffect, useState } from 'react';
 
 export const AnimatedWordRotator = () => {
   const [index, setIndex] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex(prev => (prev + 1) % words.length);
     }, 2000);
     return () => clearInterval(interval);
   }, []);
+
   return (
     <AnimatePresence mode="wait">
       <motion.span
