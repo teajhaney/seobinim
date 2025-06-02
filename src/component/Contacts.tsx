@@ -176,17 +176,16 @@ const Contacts = () => {
                 {errors.message && <p className={errorStyle}>{errors.message.message}</p>}
               </div>
 
-              <Button
-                onclick={() => {}}
+              <button
                 type="submit"
-                className="w-52 bg-secondary text-white py-3 px-5 rounded-lg hover:bg-accent transition-colors duration-300 font-semibold flex justify-center"
+                className="w-52 bg-secondary text-white py-3 px-5 rounded-lg hover:bg-accent transition-colors duration-300 font-semibold flex justify-center cursor-pointer"
               >
                 {isLoading ? (
                   <LooadingSpinner className="border-white group-hover:border-primary w-6 h-6" />
                 ) : (
                   <p className="text-xs md:text-sm font-inter">Sending message</p>
                 )}
-              </Button>
+              </button>
             </form>
           </motion.div>
         </div>
