@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'motion/react';
-import { Button, LooadingSpinner } from '@/component';
+import { LooadingSpinner } from '@/component';
 
 const contactSchema = z.object({
   name: z.string().min(1, 'Name is required'),
