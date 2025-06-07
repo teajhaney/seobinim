@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #121212;
@@ -8,13 +8,6 @@
   --secondary: #f68338;
   --accent: #c65306;
 }
-
-/* @media (prefers-color-scheme: dark) {
-	:root {
-	  --background: #0a0a0a;
-	  --foreground: #ededed;
-	}
-  } */
 
 @theme inline {
   --color-background: var(--background);
@@ -36,7 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: var(--text);
   background: var(--background);
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
