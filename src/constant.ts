@@ -74,6 +74,7 @@ export const projects = [
       'SIMVOICE is a simple and efficient invoice web app that allows users to create, save, and download invoices as PDF files for streamlined billing.',
     language: 'NextJs + TailwindCSS + Firebase',
     link: 'https://simvoice.vercel.app/',
+    image: 'images/simvoice.png',
   },
   {
     name: 'SIMPLY FRESH ',
@@ -81,6 +82,7 @@ export const projects = [
       'A fully responsive e-commerce website for a local supermarket. Users can explore products, browse categories, and shop with a clean and intuitive UI.',
     language: 'ReactJS + TailwindCSS + Vite',
     link: 'https://simple-fresh-supermarket.vercel.app/',
+    image: 'images/simplyfresh.png',
   },
   {
     name: 'BOOK SMART',
@@ -88,6 +90,7 @@ export const projects = [
       'Book Smart is an online platform for browsing and buying books efficiently. It provides a seamless shopping experience with secure payment integration.',
     language: 'ReactJS + TailwindCSS + Paystack Sdk',
     link: 'https://book-smart-app-theta.vercel.app/',
+    image: 'images/booksmart.png',
   },
 ];
 
