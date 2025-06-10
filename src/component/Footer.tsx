@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <footer className="py-10">
       <div className="contentMargin">
-        <div className="flex flex-col justify-start items-start">
+        <div className="flex flex-col justify-center items-center">
           <div className="flex flex-row items-center lg:gap-[4px]">
             <span>
               <AiOutlineCopyright className="size-[18px] md:size-[20px] text-accent" />
