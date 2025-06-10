@@ -1,54 +1,54 @@
-import { FaQuidditch } from "react-icons/fa";
-import { FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
-import { FaLinkedin, FaFacebookF } from "react-icons/fa6";
-import { IoCodeSlashOutline } from "react-icons/io5";
-import { BiGitCompare } from "react-icons/bi";
+import { FaQuidditch } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaFacebookF } from 'react-icons/fa6';
+import { IoCodeSlashOutline } from 'react-icons/io5';
+import { BiGitCompare } from 'react-icons/bi';
 
 export const navigationItems = [
-  { item: "Home", link: "home" },
-  { item: "Services", link: "services" },
-  { item: "Projects", link: "projects" },
-  { item: "Tools", link: "tools" },
-  { item: "Contacts", link: "contacts" },
+  { item: 'Home', link: 'home' },
+  { item: 'Services', link: 'services' },
+  { item: 'Projects', link: 'projects' },
+  { item: 'Tools', link: 'tools' },
+  { item: 'Contacts', link: 'contacts' },
 ];
 export const words = ['Creative', 'Passionate', 'Innovative', 'Adaptable', 'Focused'];
 
 export const links = [
   {
     icon: FaGithub,
-    link: "https://www.github.com/teajhaney",
+    link: 'https://www.github.com/teajhaney',
   },
   {
     icon: FaLinkedin,
-    link: "https://www.linkedin.com/in/yusuf-tijani-605b04167/",
+    link: 'https://www.linkedin.com/in/yusuf-tijani-605b04167/',
   },
   {
     icon: FaTwitter,
-    link: "https://www.x.com/seobinim",
+    link: 'https://www.x.com/seobinim',
   },
   {
     icon: FaInstagram,
-    link: "https://www.instagram.com/teajhaney",
+    link: 'https://www.instagram.com/teajhaney',
   },
   {
     icon: FaFacebookF,
-    link: "https://www.facebook.com/teajhaney",
+    link: 'https://www.facebook.com/teajhaney',
   },
 ];
 
 export const services = [
   {
     id: 1,
-    title: "FRONTEND DEVELOPMENT",
+    title: 'FRONTEND DEVELOPMENT',
     description:
-      "Building responsive, scalable, and performant web applications using modern frameworks like React, Next.js, and TypeScript.",
+      'Building responsive, scalable, and performant web applications using modern frameworks like React, Next.js, and TypeScript.',
     icon: IoCodeSlashOutline,
   },
   {
     id: 2,
-    title: "UI IMPLEMENTATION",
+    title: 'UI IMPLEMENTATION',
     description:
-      "Translating design files into pixel-perfect, interactive user interfaces that follow the latest UI/UX standards and practices.",
+      'Translating design files into pixel-perfect, interactive user interfaces that follow the latest UI/UX standards and practices.',
     icon: FaQuidditch,
   },
   //   {
@@ -60,93 +60,111 @@ export const services = [
   //   },
   {
     id: 4,
-    title: "BROWSER COMPATIBILITY",
+    title: 'BROWSER COMPATIBILITY',
     description:
-      "Ensuring consistent experiences across all major browsers and devices through thorough testing and standards-compliant code.",
+      'Ensuring consistent experiences across all major browsers and devices through thorough testing and standards-compliant code.',
     icon: BiGitCompare,
   },
 ];
 
 export const projects = [
   {
-    name: "SIMVOICE",
+    name: 'SIMVOICE',
     description:
-      "SIMVOICE is a simple and efficient invoice web app that allows users to create, save, and download invoices as PDF files for streamlined billing.",
-    language: "NextJs + TailwindCSS + Firebase",
-    link: "https://simvoice.vercel.app/",
+      'SIMVOICE is a simple and efficient invoice web app that allows users to create, save, and download invoices as PDF files for streamlined billing.',
+    language: 'NextJs + TailwindCSS + Firebase',
+    link: 'https://simvoice.vercel.app/',
   },
   {
-    name: "SIMPLY FRESH ",
+    name: 'SIMPLY FRESH ',
     description:
-      "A fully responsive e-commerce website for a local supermarket. Users can explore products, browse categories, and shop with a clean and intuitive UI.",
-    language: "ReactJS + TailwindCSS + Vite",
-    link: "https://simple-fresh-supermarket.vercel.app/",
+      'A fully responsive e-commerce website for a local supermarket. Users can explore products, browse categories, and shop with a clean and intuitive UI.',
+    language: 'ReactJS + TailwindCSS + Vite',
+    link: 'https://simple-fresh-supermarket.vercel.app/',
   },
   {
-    name: "BOOK SMART",
+    name: 'BOOK SMART',
     description:
-      "Book Smart is an online platform for browsing and buying books efficiently. It provides a seamless shopping experience with secure payment integration.",
-    language: "ReactJS + TailwindCSS + Paystack Sdk",
-    link: "https://book-smart-app-theta.vercel.app/",
+      'Book Smart is an online platform for browsing and buying books efficiently. It provides a seamless shopping experience with secure payment integration.',
+    language: 'ReactJS + TailwindCSS + Paystack Sdk',
+    link: 'https://book-smart-app-theta.vercel.app/',
   },
 ];
 
+import { TiHtml5 } from 'react-icons/ti';
+import { IoLogoCss3 } from 'react-icons/io5';
+import { FaBootstrap, FaGitAlt, FaReact, FaFigma } from 'react-icons/fa';
+import { RiTailwindCssFill } from 'react-icons/ri';
+import { TbBrandJavascript } from 'react-icons/tb';
+import { BiLogoTypescript } from 'react-icons/bi';
+import { SiNextdotjs } from 'react-icons/si';
+import { SiGreensock } from 'react-icons/si';
+import { MdMotionPhotosOn } from 'react-icons/md';
 export const tools = [
   {
     id: 0,
-    title: "Html",
+    title: 'Html',
+    icon: TiHtml5,
   },
   {
     id: 1,
-    title: "Css",
+    title: 'Css',
+    icon: IoLogoCss3,
   },
   {
     id: 2,
-    title: "Bootstrap",
+    title: 'Bootstrap',
+    icon: FaBootstrap,
   },
   {
     id: 3,
-    title: "TailwindCSS",
+    title: 'TailwindCSS',
+    icon: RiTailwindCssFill,
   },
 
   {
     id: 4,
-    title: "JavaScript",
+    title: 'JavaScript',
+    icon: TbBrandJavascript,
   },
   {
     id: 5,
-    title: "TypeScript",
+    title: 'TypeScript',
+    icon: BiLogoTypescript,
   },
   {
     id: 6,
-    title: "ReactJs",
+    title: 'ReactJs',
+    icon: FaReact,
   },
   {
     id: 7,
-    title: "NextJs",
+    title: 'NextJs',
+    icon: SiNextdotjs,
   },
   {
     id: 8,
-    title: "GSAP",
+    title: 'GSAP',
+    icon: SiGreensock,
   },
   {
     id: 9,
-    title: "Motion",
+    title: 'Motion',
+    icon: MdMotionPhotosOn,
   },
   {
     id: 10,
-    title: "Git",
+    title: 'Git',
+    icon: FaGitAlt,
   },
   {
     id: 11,
-    title: "Github",
+    title: 'Github',
+    icon: FaGithub,
   },
   {
     id: 12,
-    title: "Figma",
-  },
-  {
-    id: 13,
-    title: "Illustrator",
+    title: 'Figma',
+    icon: FaFigma,
   },
 ];
