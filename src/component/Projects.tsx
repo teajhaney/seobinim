@@ -27,7 +27,7 @@ const Projects = () => {
 
         {/* Project cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map(({ name, description, link, language, image }, index) => (
+          {projects.slice(0, 6).map(({ name, description, link, language, image }, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -67,9 +67,6 @@ const Projects = () => {
                     whileHover={{ x: 5 }}
                     className="flex items-center space-x-3  hover:text-secondary transition-colors"
                   ></motion.div>
-
-                  {/* Bottom hover line */}
-                  <div className="h-[2px] w-full bg-gradient-to-r from-accent/50 to-secondary/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 absolute bottom-0 left-0" />
                 </div>
               </Link>
             </motion.div>

@@ -4,15 +4,15 @@ import { motion } from 'motion/react';
 import Link from 'next/link';
 import React from 'react';
 
-const projectsPage = () => {
+const ProjectsPage = () => {
   return (
-    <section className=" section " id="projects">
+    <section className=" py-10 " id="projects">
       <div className="contentMargin space-y-10">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           className="space-y-5"
         >
           <h2 className="font-bold text-2xl">
@@ -31,8 +31,7 @@ const projectsPage = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               whileHover={{
                 scale: 1.015,
@@ -64,21 +63,18 @@ const projectsPage = () => {
                   <p className=" text-sm flex-grow">{description}</p>
 
                   <motion.div
-                    whileHover={{ x: 5 }}
+                    animate={{ x: 5 }}
                     className="flex items-center space-x-3  hover:text-secondary transition-colors"
                   ></motion.div>
-
-                  {/* Bottom hover line */}
-                  {/* <div className="h-[2px] w-full bg-gradient-to-r from-accent/50 to-secondary/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 absolute bottom-0 left-0" /> */}
                 </div>
               </Link>
             </motion.div>
           ))}
         </div>
         <div className="flex justify-end">
-          <Link href="/projectsPage">
+          <Link href="/">
             {' '}
-            <h1 className="text-secondary cursor-pointer">View more &gt;&gt;&gt; </h1>
+            <h1 className="text-secondary cursor-pointer">Home page </h1>
           </Link>
         </div>
       </div>
@@ -86,4 +82,4 @@ const projectsPage = () => {
   );
 };
 
-export default projectsPage;
+export default ProjectsPage;

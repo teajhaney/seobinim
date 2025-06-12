@@ -61,8 +61,6 @@ const Service = () => {
 
                 <p className=" text-sm leading-relaxed">{description}</p>
               </div>
-
-              <div className="h-[2px] w-full gradient-bg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </motion.div>
           ))}
         </div>
@@ -72,4 +70,3 @@ const Service = () => {
 };
 
 export default Service;
-
