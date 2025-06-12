@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import Link from 'next/link';
 import React from 'react';
 
-const Projects = () => {
+const projectsPage = () => {
   return (
     <section className=" section " id="projects">
       <div className="contentMargin space-y-10">
@@ -69,7 +69,7 @@ const Projects = () => {
                   ></motion.div>
 
                   {/* Bottom hover line */}
-                  <div className="h-[2px] w-full bg-gradient-to-r from-accent/50 to-secondary/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 absolute bottom-0 left-0" />
+                  {/* <div className="h-[2px] w-full bg-gradient-to-r from-accent/50 to-secondary/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 absolute bottom-0 left-0" /> */}
                 </div>
               </Link>
             </motion.div>
@@ -86,4 +86,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default projectsPage;
