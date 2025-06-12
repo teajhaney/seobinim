@@ -1,8 +1,9 @@
 'use client';
-import { projects } from '@/constant';
+import { navigationItems, projects } from '@/constant';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import React from 'react';
+import { IoIosArrowRoundUp } from 'react-icons/io';
 
 const ProjectsPage = () => {
   return (
@@ -15,12 +16,21 @@ const ProjectsPage = () => {
           transition={{ duration: 0.5 }}
           className="space-y-5"
         >
-          <h2 className="font-bold text-2xl">
-            Projects
-            <span className="inline-block ml-4 transform hover:scale-110 transition-transform">
-              🚀
-            </span>
-          </h2>
+          <div className="flex justify-between">
+            <h2 className="font-bold text-2xl">
+              Projects
+              <span className="inline-block ml-4 transform hover:scale-110 transition-transform">
+                🚀
+              </span>
+            </h2>
+            <Link href={`/#${navigationItems[4].link}`}>
+              <div className="px-5 py-3 bg-secondary rounded-sm flex-center font-medium text-sm gap-2 hover:shadow-[0px_0px_10px_#f68338] cursor-pointer  transition-all duration-300">
+                {' '}
+                <p>HIRE ME</p>
+                <IoIosArrowRoundUp className="rotate-z-45" />
+              </div>
+            </Link>
+          </div>
           <div className="h-1 w-24 gradient-bg mb-6" />
           <p className="text-sm text-gray">Showcasing my latest works and experiments in tech</p>
         </motion.div>

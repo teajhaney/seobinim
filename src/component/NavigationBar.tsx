@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 import { IoIosArrowRoundUp } from 'react-icons/io';
 import { navigationItems } from '@/constant';
 
@@ -22,38 +23,22 @@ const NavigationBar = () => {
         <ul className="h-full flex items-center gap-5 max-md:hidden">
           {navigationItems.map(({ item, link }, index) => (
             <li key={index}>
-              <a
-                href={`#${link}`}
-                onClick={e => {
-                  e.preventDefault();
-                  const target = document.querySelector(`#${link}`);
-                  if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
+              <Link
+                href={`/#${link}`}
                 className="text-secondary font-medium text-lg cursor-pointer hover:underline hover:decoration-secondary"
               >
                 {item}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
-        <a
-          href={`#${navigationItems[4].item}`}
-          onClick={e => {
-            e.preventDefault();
-            const target = document.querySelector(`#${navigationItems[4].link}`);
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-        >
+        <Link href={`/#${navigationItems[4].link}`}>
           <div className="px-5 py-3 bg-secondary rounded-sm flex-center font-medium text-sm gap-2 hover:shadow-[0px_0px_10px_#f68338] cursor-pointer  transition-all duration-300">
             {' '}
             <p>HIRE ME</p>
             <IoIosArrowRoundUp className="rotate-z-45" />
           </div>
-        </a>
+        </Link>
       </header>
     </nav>
   );
