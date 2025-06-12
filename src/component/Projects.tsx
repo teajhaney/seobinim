@@ -54,7 +54,7 @@ const Projects = () => {
                 href={link}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 inline-flex items-center group/link"
+                className="inline-flex items-center group/link"
               >
                 <div className="relative p-8 flex flex-col h-full">
                   <h3 className=" text-2xl  mb-3">{name}</h3>
