@@ -18,10 +18,15 @@ const Hero = () => {
             </span>{' '}
             Software Developer
           </h1>
-          <div className="space-y-5 md:w-[500px]">
-            <h2 className="font-bold text-lg lg:text-2xl ">
+
+          {/* <h2 className="font-bold text-lg lg:text-2xl ">
               I craft reliable, scalable products with user experience at the forefront.
-            </h2>
+            </h2> */}
+          <h2 className="font-bold text-lg lg:text-2xl ">
+            Tired of clunky website? I can help you turn clunky website into clean, accessible,
+            high-performing experience that users love and brands grow with.
+          </h2>
+          <div className="space-y-5 md:w-[500px]">
             <h2 className="font-mono text-sm lg:text-lg">
               I’m <strong>Yusuf Tijani</strong> — a self-taught developer with over a year of
               experience, building real-world solutions. I currently specialize in web development,
