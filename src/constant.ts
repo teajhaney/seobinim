@@ -28,7 +28,7 @@ export const links = [
   },
   {
     icon: FaInstagram,
-    link: 'https://www.instagram.com/teajhaney',
+    link: 'https://www.instagram.com/seobissi',
   },
   {
     icon: FaFacebookF,
